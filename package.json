@@ -1,0 +1,43 @@
+{
+  "name": "talk-a-tive",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanyabatraaa/chatApp.git"
+  },
+  "author": "Sanya Batra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sanyabatraaa/chatApp/issues"
+  },
+  "homepage": "https://github.com/sanyabatraaa/chatApp#readme",
+  "dependencies": {
+    "@chakra-ui/layout": "^2.3.1",
+    "@chakra-ui/react": "^2.8.2",
+    "@emotion/react": "^11.13.0",
+    "@emotion/styled": "^11.13.0",
+    "axios": "^1.7.2",
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "config": "^3.3.12",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-async-handler": "^1.2.0",
+    "framer-motion": "^11.3.19",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.8.0",
+    "mongoose": "^8.5.2",
+    "react": "^18.3.1",
+    "react-router-dom": "^5.3.4",
+    "socket.io": "^4.7.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
