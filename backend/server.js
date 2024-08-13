@@ -29,7 +29,15 @@ app.get("/",(req,res)=>{
 // })
 const PORT=process.env.PORT || 5000;
 const server=app.listen(PORT,console.log("Server started on port 5000".yellow.bold));
+const corsOptions = {
+    origin: ['https://chat-app-beige-two-30.vercel.app/',],
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'Cookie'],
+    credentials: true ,
+    sameSite: 'None'
+};
 
+app.use(cors(corsOptions));
 
 const io = require("socket.io")(server, {
   pingTimeout: 60000,
