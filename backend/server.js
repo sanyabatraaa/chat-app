@@ -22,7 +22,7 @@ app.get("/",(req,res)=>{
 
 
 const corsOptions = {
-    origin: ['https://chat-app-1t1p.onrender.com', 'http://localhost:3000' ],
+    origin: ['https://chat-app-beige-two-30.vercel.app', 'http://localhost:3000' ],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization', 'Cookie'],
     credentials: true ,
