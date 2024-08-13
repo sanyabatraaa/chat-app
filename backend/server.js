@@ -6,7 +6,7 @@ const color=require("colors");
 const userRoutes = require("./routes/userRoutes");
 const chatRoutes = require("./routes/chatRoutes");
 const messageRoutes = require("./routes/messageRoutes");
-// const cors = require("cors")
+const cors = require('cors');
 
 dotenv.config();
 connectDB();
@@ -19,6 +19,18 @@ app.use("/api/message", messageRoutes);
 app.get("/",(req,res)=>{
     res.send("api is running successfully")
 })
+
+
+const corsOptions = {
+    origin: ['https://chat-app-1t1p.onrender.com', 'http://localhost:3000' ],
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'Cookie'],
+    credentials: true ,
+    sameSite: 'None'
+};
+
+app.use(cors(corsOptions));
+
 // app.get("/api/chat",(req,res)=>{
 //     console.log(chats);
 //     res.send(chats);
@@ -29,6 +41,7 @@ app.get("/",(req,res)=>{
 // })
 const PORT=process.env.PORT || 5000;
 const server=app.listen(PORT,console.log("Server started on port 5000".yellow.bold));
+
 
 
 const io = require("socket.io")(server, {
